@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<GUI>
+	<Layer name="GameScreen">
+		<Controls>
+      <GameScreen name="GameScreen"/>
+		</Controls>
+	</Layer>
+  <Layer name="FinishScreen">
+    <Controls>
+      <FinishScreen name="FinishScreen"/>
+    </Controls>
+  </Layer>
+</GUI>

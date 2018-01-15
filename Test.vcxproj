@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Test</ProjectName>
+    <ProjectGuid>{21AF5959-2CF1-417D-90ED-70052151E734}</ProjectGuid>
+    <RootNamespace>test</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)libs\boost;$(ProjectDir)libs\ogg\include;$(ProjectDir)libs\vorbis\include;$(ProjectDir)libs\theora\include;$(ProjectDir)libs\zlib\include;$(ProjectDir)libs\luabind\include;$(ProjectDir)libs\lua\include;$(ProjectDir)libs\jpeg\include;$(ProjectDir)libs\png\include;$(ProjectDir)libs\freetype\include;$(ProjectDir)libs\OpenAL\include;$(ProjectDir)libs\webp\include;$(ProjectDir)libs\PVRTC\Windows_x86_32\Lib;$(ProjectDir)libs\angle\include;$(ProjectDir)libs\pugixml\include;$(ProjectDir)engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0501;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <StringPooling>true</StringPooling>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Version.lib;comctl32.lib;psapi.lib;shell32.lib;advapi32.lib;user32.lib;gdi32.lib;comdlg32.lib;luad.lib;luabindd.lib;pngd.lib;jpegd.lib;oggd.lib;vorbisd.lib;theorad.lib;zlibd.lib;engined.lib;freetyped.lib;libwebp.lib;pvrtc.lib;pugixmld.lib;OpenAL32.lib;libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)bin\$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\zlib\lib\vc12;$(ProjectDir)libs\jpeg\lib\vc12;$(ProjectDir)libs\png\lib\vc12;$(ProjectDir)libs\lua\lib\vc12;$(ProjectDir)libs\luabind\lib\vc12;$(ProjectDir)libs\ogg\lib\vc12;$(ProjectDir)libs\vorbis\lib\vc12;$(ProjectDir)libs\theora\lib\vc12;$(ProjectDir)libs\freetype\lib\vc12;$(ProjectDir)libs\openal\libs\Win32;$(ProjectDir)libs\boost\stage\lib;$(ProjectDir)libs\webp\lib\vc12;$(ProjectDir)libs\pugixml\lib\vc12;$(ProjectDir)libs\PVRTC\Windows_x86_32\Lib;$(ProjectDir)libs\angle\lib;$(ProjectDir)engine\lib\vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)libs\boost;$(ProjectDir)libs\ogg\include;$(ProjectDir)libs\vorbis\include;$(ProjectDir)libs\theora\include;$(ProjectDir)libs\zlib\include;$(ProjectDir)libs\luabind\include;$(ProjectDir)libs\lua\include;$(ProjectDir)libs\jpeg\include;$(ProjectDir)libs\png\include;$(ProjectDir)libs\freetype\include;$(ProjectDir)libs\OpenAL\include;$(ProjectDir)libs\webp\include;$(ProjectDir)libs\PVRTC\Windows_x86_32\Lib;$(ProjectDir)libs\angle\include;$(ProjectDir)libs\pugixml\include;$(ProjectDir)engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0501;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Version.lib;psapi.lib;shell32.lib;advapi32.lib;user32.lib;gdi32.lib;comdlg32.lib;comctl32.lib;lua.lib;luabind.lib;png.lib;jpeg.lib;ogg.lib;vorbis.lib;theora.lib;zlib.lib;engine.lib;freetype.lib;libwebp.lib;pvrtc.lib;pugixml.lib;OpenAL32.lib;libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)bin\$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs\zlib\lib\vc12;$(ProjectDir)libs\jpeg\lib\vc12;$(ProjectDir)libs\png\lib\vc12;$(ProjectDir)libs\lua\lib\vc12;$(ProjectDir)libs\luabind\lib\vc12;$(ProjectDir)libs\ogg\lib\vc12;$(ProjectDir)libs\vorbis\lib\vc12;$(ProjectDir)libs\theora\lib\vc12;$(ProjectDir)libs\freetype\lib\vc12;$(ProjectDir)libs\openal\libs\Win32;$(ProjectDir)libs\boost\stage\lib;$(ProjectDir)libs\webp\lib\vc12;$(ProjectDir)libs\pugixml\lib\vc12;$(ProjectDir)libs\PVRTC\Windows_x86_32\Lib;$(ProjectDir)libs\angle\lib;$(ProjectDir)engine\lib\vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\collision_checker.cpp" />
+    <ClCompile Include="src\finish_screen.cpp" />
+    <ClCompile Include="src\game_manager.cpp" />
+    <ClCompile Include="src\game_objects.cpp" />
+    <ClCompile Include="src\game_screen.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\TestAppDelegate.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\cell_grid.h" />
+    <ClInclude Include="src\collision_checker.h" />
+    <ClInclude Include="src\finish_screen.h" />
+    <ClInclude Include="src\game_manager.h" />
+    <ClInclude Include="src\game_objects.h" />
+    <ClInclude Include="src\game_screen.h" />
+    <ClInclude Include="src\TestAppDelegate.h" />
+    <ClInclude Include="src\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="bin\base_p\Layers.xml" />
+    <Xml Include="bin\base_p\Resources.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\base_p\start.lua" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,15 @@
+CountTarget=15
+Time=30
+TargetMinSpeed=10
+TargetMaxSpeed=100
+TargetSize=30
+MissleSpeed=300
+GunFireSpeed=3
+GunRotationSpeed=16
+ExplosionSize=35
+ExplosionFPS=24
+ExplosionGenerations=1
+ExplosionMaxChilds=7
+ExplosionMinChilds=3
+MissleUseEffect=1
+ExplosionUseEffect=1

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Resources>
+	<FreeTypeFonts group="TestGroup" upload="false">
+		<font name="arial" family="arial" size="12" color="255;255;255;255" letterSpacing="0">
+			<Effect alpha="0.1" type="shadow" blurX="2" blurY="2" strength="50" angle="0" inner="false" color="0;0;0;255" offset="0"/>
+		</font>
+    <font name="impact" family="impact" size="20" color="55;107;215;255" letterSpacing="0" />
+    <font name="impact_win" family="impact" size="20" color="0;255;0;255" letterSpacing="0" />
+    <font name="impact_loose" family="impact" size="20" color="255;0;0;255" letterSpacing="0" />
+    <font name="impact_win_small" family="impact" size="14" color="0;255;0;255" letterSpacing="0" />
+    <font name="impact_loose_small" family="impact" size="14" color="255;0;0;255" letterSpacing="0" />
+	</FreeTypeFonts>
+	<Textures>
+		<texture id="Asteroid" path="textures/Asteroids/asteroids_sheet.png" group="TestGroup" upload="false"/>
+    <texture id="Gun" path="textures/Asteroids/gun_sheet.png" group="TestGroup" upload="false"/>
+    <texture id="Space" path="textures/Asteroids/space_small.png" group="TestGroup" upload="false"/>
+    <texture id="Station" path="textures/Asteroids/space_platform.png" group="TestGroup" upload="false"/>
+    <texture id="ShootFlares" path="textures/Asteroids/shoot_flares.png" group="TestGroup" upload="false"/>
+    <texture id="ExplosionBig" path="textures/Asteroids/explosion_sheet_big.png" group="TestGroup" upload="false"/>
+    <texture id="ExplosionSmall" path="textures/Asteroids/explosion_sheet_small.png" group="TestGroup" upload="false"/>
+    <texture id="YouWin" path="textures/GUI/win.png" group="TestGroup" upload="false"/>
+    <texture id="YouLose" path="textures/GUI/lose.png" group="TestGroup" upload="false"/>
+    <texture id="Button" path="textures/GUI/button.png" group="TestGroup" upload="false"/>
+	</Textures>
+</Resources>
